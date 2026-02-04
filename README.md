@@ -62,6 +62,13 @@ Instale as dependências:
 uv sync
 ```
 
+Inicie o MongoDB via Docker:
+
+```bash
+docker compose up -d
+docker ps
+```
+
 Inicie o servidor:
 
 ```bash
