@@ -7,7 +7,6 @@ WORKDIR /app
 
 # dependências do sistema
 RUN apt-get update && apt-get install -y \
-    build-essential \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
@@ -31,4 +30,4 @@ COPY . .
 EXPOSE 8000
 
 # comando padrão (produção)
-CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:8000", "app:app"]
+CMD ["gunicorn", "-w", "2", "-b", "localhost:8000", "app:app"]
