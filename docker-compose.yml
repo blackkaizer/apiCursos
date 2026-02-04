@@ -14,5 +14,16 @@ services:
     volumes:
       - mongo_data:/data/db
 
+  api:
+    build: .
+    container_name: apicursos
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - mongodb
+    command: uv run gunicorn -w 1 -b 0.0.0.0:8000 main:app
+
 volumes:
   mongo_data:

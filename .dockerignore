@@ -1,0 +1,42 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Virtual envs (NUNCA mandar pro Docker)
+.venv/
+venv/
+env/
+
+# Docker
+Dockerfile
+docker-compose.yml
+docker-compose.*.yml
+
+# Ambiente
+.env
+.env.*
+
+# Editor / SO
+.vscode/
+.idea/
+*.log
+*.swp
+.DS_Store
+Thumbs.db
+
+# Testes e docs
+tests/
+docs/
+
+# Node / front (se existir)
+node_modules/
+dist/
+build/
