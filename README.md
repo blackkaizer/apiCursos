@@ -56,23 +56,11 @@ Certifique-se de ter instalado:
 
 ## ▶️ Executando a API
 
-Instale as dependências:
+Inicie o projeto via Docker:
 
 ```bash
-uv sync
-```
-
-Inicie o MongoDB via Docker:
-
-```bash
-docker compose up -d
+docker compose up -d --build
 docker ps
-```
-
-Inicie o servidor:
-
-```bash
-uv run app.py
 ```
 
 A API estará disponível em:
@@ -112,7 +100,8 @@ http://localhost:5000
 Este projeto utiliza:
 
 * 🐍 **Python**
-* 📦 **MongoDB / Via Docker**
+* 📦 **MongoDB**
+* 📦 **Docker**
 * 📦 Gerenciador de dependências *(UV)*
 * 🧠 Estrutura de API simples para aprendizado
 
