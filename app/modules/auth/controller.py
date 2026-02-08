@@ -49,3 +49,9 @@ class User(Resource):
         """Deletar usuario"""
         return AuthService.delete_user(username)
 
+    @jwt_required()
+    @api.doc(security=[{'BearerAuth': []}])
+    def put(self, username: str):
+        """Atualizar usuario"""
+        return AuthService.inative_user(username)
+
