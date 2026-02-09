@@ -22,10 +22,13 @@ def create_app():
         app,
         title="Courses API",
         version="1.0",
-        description="API de Cursos"
+        description="Courses API",
+        doc="/docs"
     )
 
-    api.add_namespace(course_ns, path="/courses")
-    api.add_namespace(auth_ns, path="/auth")
+    API_PREFIX = "/api/v1"
+
+    api.add_namespace(auth_ns, path=f"{API_PREFIX}/auth")
+    api.add_namespace(course_ns, path=f"{API_PREFIX}/courses")
 
     return app
